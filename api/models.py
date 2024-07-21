@@ -27,3 +27,22 @@ class UserInfo(Base):
     ProfileComment = Column(String, nullable=True)
 
     # Follower, Following column 추가
+    
+    # Diary =  relationship("UserDiary", back_populates="Diaryuser")
+
+
+
+class UserDiary(Base):
+
+    __tablename__= "userdiary"
+
+    id = Column(Integer,primary_key=True)
+
+    Date = Column(DateTime, nullable=False)
+    Diarycontent = Column(Text,nullable=False)
+    Response = Column(Text,nullable=False)
+    Diarytodo = Column(String, nullable=True)
+    
+    # Diaryuserid = Column(Integer, ForeignKey('userinfo.id'))
+
+    # Diaryuser =  relationship("UserInfo", back_populates="Diary")
