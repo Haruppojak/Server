@@ -8,3 +8,8 @@ def loadTodoList(db : Session):
     db.query()
     return todoList
 
+def creatediary(db: Session, diary: CreateDiarySchema):
+    diary = UserDiary(content = diary.content,
+                      date = datetime.now())
+    db.add(diary)
+    db.commit()
