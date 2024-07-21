@@ -13,12 +13,9 @@ class UserInfo(Base):
     __tablename__ = "userinfo"
 
     id = Column(Integer, primary_key=True)
-    
     ID = Column(String, nullable=False)
     Password = Column(String, nullable=False)
-    
     Name = Column(String, nullable=False)
-    Birth = Column(Date, nullable=False) # 수정 필요
     Email = Column(String, nullable=False)
     Gender = Column(Integer, nullable=False)
 
@@ -27,6 +24,7 @@ class UserInfo(Base):
     ProfileComment = Column(String, nullable=True)
 
     # Follower, Following column 추가
+<<<<<<< HEAD
     
     # Diary =  relationship("UserDiary", back_populates="Diaryuser")
 
@@ -46,3 +44,14 @@ class UserDiary(Base):
     # Diaryuserid = Column(Integer, ForeignKey('userinfo.id'))
 
     # Diaryuser =  relationship("UserInfo", back_populates="Diary")
+=======
+
+
+class TodoList(Base):
+    __tablename__ = "todolist"
+
+    id = Column(Integer, primary_key=True, index=True)
+    date = Column(DateTime, default=datetime.utcnow, nullable=False)
+    todo = Column(String, nullable=False)
+    check = Column(Boolean, nullable=False, default=False)
+>>>>>>> d08863027d3a27e4f761c8727af28976237e0c80
