@@ -1,7 +1,12 @@
 from sqlalchemy.orm import Session
 from datetime import datetime
-from api.models import UserDiary
-from api.schema import CreateDiarySchema, UpdatePostSchema, CreateCommentSchema
+from api.models import *
+from api.schema import *
+
+def loadTodoList(db : Session):
+    todoList = db.query(TodoList).all()
+    db.query()
+    return todoList
 
 def creatediary(db: Session, diary: CreateDiarySchema):
     diary = UserDiary(content = diary.content,
