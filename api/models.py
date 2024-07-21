@@ -13,9 +13,12 @@ class UserInfo(Base):
     __tablename__ = "userinfo"
 
     id = Column(Integer, primary_key=True)
+
     ID = Column(String, nullable=False)
     Password = Column(String, nullable=False)
+
     Name = Column(String, nullable=False)
+    Birth = Column(Date, nullable=False)  # 수정 필요
     Email = Column(String, nullable=False)
     Gender = Column(Integer, nullable=False)
 
