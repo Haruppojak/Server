@@ -27,6 +27,27 @@ class UserInfo(Base):
     userProfileComment = Column(String, nullable=True)
 
     # Follower, Following column 추가
+<<<<<<< HEAD
+    
+    # Diary =  relationship("UserDiary", back_populates="Diaryuser")
+
+
+
+class UserDiary(Base):
+
+    __tablename__= "userdiary"
+
+    id = Column(Integer,primary_key=True)
+
+    Date = Column(DateTime, nullable=False)
+    Diarycontent = Column(Text,nullable=False)
+    Response = Column(Text,nullable=False)
+    Diarytodo = Column(String, nullable=True)
+    
+    # Diaryuserid = Column(Integer, ForeignKey('userinfo.id'))
+
+    # Diaryuser =  relationship("UserInfo", back_populates="Diary")
+=======
 
 
 class TodoList(Base):
@@ -36,3 +57,4 @@ class TodoList(Base):
     date = Column(DateTime, default=datetime.utcnow, nullable=False)
     todo = Column(String, nullable=False)
     check = Column(Boolean, nullable=False, default=False)
+>>>>>>> d08863027d3a27e4f761c8727af28976237e0c80
