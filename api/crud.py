@@ -13,6 +13,7 @@ def creatediary(db: Session, diary: CreateDiarySchema):
                       date = datetime.now())
     db.add(diary)
 
+
 def get_todos(db: Session):
     return db.query(TodoList).all()
 

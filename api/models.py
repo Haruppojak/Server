@@ -8,7 +8,6 @@ class Test(Base):
     __tablename__ = "test"
     id = Column(Integer, primary_key=True)
 
-
 class TodoList(Base):
     __tablename__ = "todolist"
 
@@ -35,6 +34,7 @@ class UserInfo(Base):
     userProfileComment = Column(String, nullable=True)
 
     # Follower, Following column 추가
+    # Follower, Following column 추가
 
 class UserDiary(Base):
 
@@ -48,5 +48,4 @@ class UserDiary(Base):
     Diarytodo = Column(String, nullable=True)
     
     # Diaryuserid = Column(Integer, ForeignKey('userinfo.id'))
-
     # Diaryuser =  relationship("UserInfo", back_populates="Diary")
