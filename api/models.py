@@ -14,17 +14,17 @@ class UserInfo(Base):
 
     id = Column(Integer, primary_key=True)
 
-    ID = Column(String, nullable=False)
-    Password = Column(String, nullable=False)
+    userID = Column(String, nullable=False)
+    userPassword = Column(String, nullable=False)
 
-    Name = Column(String, nullable=False)
-    Birth = Column(Date, nullable=False)  # 수정 필요
-    Email = Column(String, nullable=False)
-    Gender = Column(Integer, nullable=False)
+    userName = Column(String, nullable=False)
+    userBirth = Column(Date, nullable=False)  # 수정 필요
+    userEmail = Column(String, nullable=False)
+    userGender = Column(Integer, nullable=False)
 
-    PpojakCoin = Column(Integer, nullable=False)
-    ProfileName = Column(String, nullable=False)
-    ProfileComment = Column(String, nullable=True)
+    userPpojakCoin = Column(Integer, nullable=False)
+    userProfileName = Column(String, nullable=False)
+    userProfileComment = Column(String, nullable=True)
 
     # Follower, Following column 추가
 
