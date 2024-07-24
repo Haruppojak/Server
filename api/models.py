@@ -40,7 +40,7 @@ class UserDiary(Base):
 
     __tablename__= "userdiary"
 
-    id = Column(Integer,primary_key=True)
+    id = Column(Integer,primary_key=True, index=True)
 
     Date = Column(DateTime, nullable=False)
     Diarycontent = Column(Text,nullable=False)

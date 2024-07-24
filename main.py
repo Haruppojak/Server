@@ -17,3 +17,6 @@ app.add_middleware(
 
 app.include_router(router.router)
 
+@app.get("/")
+async def read_root():
+    return {"message": "Welcome to your diary"}
